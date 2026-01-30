@@ -1,19 +1,7 @@
-import { fetchProducts } from "./services/apiService";
-import Product from "./models/Product";
+import app from "./app";
 
-const runApp = async () => {
-    try {
-        console.log("E-commerce backend scaffold ready");
-        const productData = await fetchProducts();
-        const products = productData.map(
-            (p: any) => 
-                new Product(p.id, p.title, p.description, p.price, p.discountPercentage, p.category)
-        );
+const PORT = process.env.PORT || 5000;
 
-        products.forEach((p) => p.displayDetails());
-    } catch (error) {
-        console.error("Error initializing app:", error);
-    }
-};
-
-runApp();
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

@@ -1,4 +1,4 @@
-export class Product {
+export default class Product {
     id: number;
     title: string;
     description: string;
@@ -12,7 +12,7 @@ export class Product {
         description: string,
         price: number,
         discountPercentage: number,
-        category: string,
+        category: string
     ) {
         this.id = id;
         this.title = title;
@@ -23,11 +23,10 @@ export class Product {
     }
 
     displayDetails(): void {
-        // TODO: Implement display logic
+        console.log(`${this.title}: ${this.description} - $${this.price}`);
     }
 
     getPriceWithDiscount(): number {
-        // TODO: Implement discount calculation
-        return this.price;
+        return this.price - (this.price * this.discountPercentage) / 100;
     }
 }

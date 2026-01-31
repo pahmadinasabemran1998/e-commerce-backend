@@ -2,11 +2,11 @@
   "name": "e-commerce-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "src/main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts",
-    "dev": "ts-node src/index.ts",
+    "start": "node dist/main.js",
+    "dev": "node --loader ts-node/esm src/main.ts",
     "build": "tsc"
   },
   "keywords": [],

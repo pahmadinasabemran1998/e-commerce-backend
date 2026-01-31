@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
     getAllProducts,
     getProductById
-} from "../controllers/productController";
+} from "../controllers/productController.js";
 
 const router = Router();
 

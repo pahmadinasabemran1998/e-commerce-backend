@@ -1,8 +1,8 @@
 import { type Request, type Response } from "express";
-import { fetchProducts, fetchProductById } from "../services/apiService";
-import Product from "../models/Product";
-import { calculateDiscount } from "../utils/discountCalculator";
-import { calculateTax } from "../utils/taxCalculator";
+import { fetchProducts, fetchProductById } from "../services/apiService.js";
+import Product from "../models/Product.js";
+import { calculateDiscount } from "../utils/discountCalculator.js";
+import { calculateTax } from "../utils/taxCalculator.js";
 
 export const getAllProducts = async (_req: Request, res: Response) => {
     try {
